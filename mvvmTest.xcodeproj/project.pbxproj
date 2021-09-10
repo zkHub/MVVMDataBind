@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581E7A4126EAFC7500A3F526 /* VueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4026EAFC7500A3F526 /* VueButton.m */; };
+		581E7A4426EAFC8300A3F526 /* VueLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4326EAFC8300A3F526 /* VueLabel.m */; };
+		581E7A4726EAFC9200A3F526 /* VueTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4626EAFC9200A3F526 /* VueTextField.m */; };
 		58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */; };
 		58FE840826E0CB0E00BA0FE1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840726E0CB0E00BA0FE1 /* SceneDelegate.m */; };
 		58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840A26E0CB0E00BA0FE1 /* ViewController.m */; };
@@ -14,9 +17,31 @@
 		58FE841026E0CB1100BA0FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FE840F26E0CB1100BA0FE1 /* Assets.xcassets */; };
 		58FE841326E0CB1100BA0FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FE841126E0CB1100BA0FE1 /* LaunchScreen.storyboard */; };
 		58FE841626E0CB1100BA0FE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841526E0CB1100BA0FE1 /* main.m */; };
+		58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841C26E0CB7700BA0FE1 /* ViewModel.m */; };
+		58FE842126E0E05700BA0FE1 /* DBObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842026E0E05700BA0FE1 /* DBObserver.m */; };
+		58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842326E0E75B00BA0FE1 /* TestView.m */; };
+		58FE842726E1D07300BA0FE1 /* Dep.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842626E1D07200BA0FE1 /* Dep.m */; };
+		58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842926E2066F00BA0FE1 /* Watcher.m */; };
+		58FE842D26E21A4B00BA0FE1 /* ObserverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */; };
+		58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842F26E4B21500BA0FE1 /* ObserverManager.m */; };
+		58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843226E4B2B600BA0FE1 /* DataBind.m */; };
+		58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843526E513B600BA0FE1 /* DBWatcher.m */; };
+		58FE843926E516EA00BA0FE1 /* NSObject+DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */; };
+		58FE843C26E5187600BA0FE1 /* DBTargetFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843B26E5187600BA0FE1 /* DBTargetFlag.m */; };
+		58FE844D26E5FCE400BA0FE1 /* VueWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844426E5FCE400BA0FE1 /* VueWatcher.m */; };
+		58FE845026E5FFD000BA0FE1 /* VueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844F26E5FFD000BA0FE1 /* VueObserver.m */; };
+		58FE845726E863ED00BA0FE1 /* UIControl+DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */; };
+		58FE846926E9E41400BA0FE1 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE846426E9E41300BA0FE1 /* NSObject+YYModel.m */; };
+		58FE846A26E9E41400BA0FE1 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE846526E9E41300BA0FE1 /* YYClassInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		581E7A3F26EAFC7500A3F526 /* VueButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueButton.h; sourceTree = "<group>"; };
+		581E7A4026EAFC7500A3F526 /* VueButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueButton.m; sourceTree = "<group>"; };
+		581E7A4226EAFC8300A3F526 /* VueLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueLabel.h; sourceTree = "<group>"; };
+		581E7A4326EAFC8300A3F526 /* VueLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueLabel.m; sourceTree = "<group>"; };
+		581E7A4526EAFC9200A3F526 /* VueTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueTextField.h; sourceTree = "<group>"; };
+		581E7A4626EAFC9200A3F526 /* VueTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueTextField.m; sourceTree = "<group>"; };
 		58FE840026E0CB0E00BA0FE1 /* mvvmTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FE840326E0CB0E00BA0FE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +54,39 @@
 		58FE841226E0CB1100BA0FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58FE841426E0CB1100BA0FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FE841526E0CB1100BA0FE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58FE841C26E0CB7700BA0FE1 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		58FE841D26E0CB7700BA0FE1 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		58FE841F26E0E05700BA0FE1 /* DBObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBObserver.h; sourceTree = "<group>"; };
+		58FE842026E0E05700BA0FE1 /* DBObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBObserver.m; sourceTree = "<group>"; };
+		58FE842226E0E75B00BA0FE1 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		58FE842326E0E75B00BA0FE1 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		58FE842526E1D07200BA0FE1 /* Dep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dep.h; sourceTree = "<group>"; };
+		58FE842626E1D07200BA0FE1 /* Dep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dep.m; sourceTree = "<group>"; };
+		58FE842826E2066F00BA0FE1 /* Watcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Watcher.h; sourceTree = "<group>"; };
+		58FE842926E2066F00BA0FE1 /* Watcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Watcher.m; sourceTree = "<group>"; };
+		58FE842B26E21A4B00BA0FE1 /* ObserverViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverViewModel.h; sourceTree = "<group>"; };
+		58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverViewModel.m; sourceTree = "<group>"; };
+		58FE842E26E4B21500BA0FE1 /* ObserverManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverManager.h; sourceTree = "<group>"; };
+		58FE842F26E4B21500BA0FE1 /* ObserverManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverManager.m; sourceTree = "<group>"; };
+		58FE843126E4B2B600BA0FE1 /* DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBind.h; sourceTree = "<group>"; };
+		58FE843226E4B2B600BA0FE1 /* DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBind.m; sourceTree = "<group>"; };
+		58FE843426E513B600BA0FE1 /* DBWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBWatcher.h; sourceTree = "<group>"; };
+		58FE843526E513B600BA0FE1 /* DBWatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBWatcher.m; sourceTree = "<group>"; };
+		58FE843726E516EA00BA0FE1 /* NSObject+DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DataBind.h"; sourceTree = "<group>"; };
+		58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DataBind.m"; sourceTree = "<group>"; };
+		58FE843A26E5187600BA0FE1 /* DBTargetFlag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBTargetFlag.h; sourceTree = "<group>"; };
+		58FE843B26E5187600BA0FE1 /* DBTargetFlag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBTargetFlag.m; sourceTree = "<group>"; };
+		58FE844426E5FCE400BA0FE1 /* VueWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VueWatcher.m; sourceTree = "<group>"; };
+		58FE844826E5FCE400BA0FE1 /* VueWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VueWatcher.h; sourceTree = "<group>"; };
+		58FE844E26E5FFD000BA0FE1 /* VueObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueObserver.h; sourceTree = "<group>"; };
+		58FE844F26E5FFD000BA0FE1 /* VueObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueObserver.m; sourceTree = "<group>"; };
+		58FE845526E863EC00BA0FE1 /* UIControl+DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+DataBind.h"; sourceTree = "<group>"; };
+		58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+DataBind.m"; sourceTree = "<group>"; };
+		58FE846226E9E41300BA0FE1 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		58FE846326E9E41300BA0FE1 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		58FE846426E9E41300BA0FE1 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		58FE846526E9E41300BA0FE1 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		58FE846626E9E41300BA0FE1 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +119,26 @@
 		58FE840226E0CB0E00BA0FE1 /* mvvmTest */ = {
 			isa = PBXGroup;
 			children = (
+				58FE846126E9E41300BA0FE1 /* YYModel */,
+				58FE844026E5FCE300BA0FE1 /* DataBind */,
 				58FE840326E0CB0E00BA0FE1 /* AppDelegate.h */,
 				58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */,
 				58FE840626E0CB0E00BA0FE1 /* SceneDelegate.h */,
 				58FE840726E0CB0E00BA0FE1 /* SceneDelegate.m */,
 				58FE840926E0CB0E00BA0FE1 /* ViewController.h */,
 				58FE840A26E0CB0E00BA0FE1 /* ViewController.m */,
+				58FE841D26E0CB7700BA0FE1 /* ViewModel.h */,
+				58FE841C26E0CB7700BA0FE1 /* ViewModel.m */,
+				58FE842B26E21A4B00BA0FE1 /* ObserverViewModel.h */,
+				58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */,
+				58FE843A26E5187600BA0FE1 /* DBTargetFlag.h */,
+				58FE843B26E5187600BA0FE1 /* DBTargetFlag.m */,
+				58FE842526E1D07200BA0FE1 /* Dep.h */,
+				58FE842626E1D07200BA0FE1 /* Dep.m */,
+				58FE842826E2066F00BA0FE1 /* Watcher.h */,
+				58FE842926E2066F00BA0FE1 /* Watcher.m */,
+				58FE842226E0E75B00BA0FE1 /* TestView.h */,
+				58FE842326E0E75B00BA0FE1 /* TestView.m */,
 				58FE840C26E0CB0E00BA0FE1 /* Main.storyboard */,
 				58FE840F26E0CB1100BA0FE1 /* Assets.xcassets */,
 				58FE841126E0CB1100BA0FE1 /* LaunchScreen.storyboard */,
@@ -74,6 +146,64 @@
 				58FE841526E0CB1100BA0FE1 /* main.m */,
 			);
 			path = mvvmTest;
+			sourceTree = "<group>";
+		};
+		58FE844026E5FCE300BA0FE1 /* DataBind */ = {
+			isa = PBXGroup;
+			children = (
+				58FE845926E88F0200BA0FE1 /* HookBind */,
+				58FE845826E88DE200BA0FE1 /* KVOBind */,
+			);
+			path = DataBind;
+			sourceTree = "<group>";
+		};
+		58FE845826E88DE200BA0FE1 /* KVOBind */ = {
+			isa = PBXGroup;
+			children = (
+				58FE843126E4B2B600BA0FE1 /* DataBind.h */,
+				58FE843226E4B2B600BA0FE1 /* DataBind.m */,
+				58FE842E26E4B21500BA0FE1 /* ObserverManager.h */,
+				58FE842F26E4B21500BA0FE1 /* ObserverManager.m */,
+				58FE841F26E0E05700BA0FE1 /* DBObserver.h */,
+				58FE842026E0E05700BA0FE1 /* DBObserver.m */,
+				58FE843426E513B600BA0FE1 /* DBWatcher.h */,
+				58FE843526E513B600BA0FE1 /* DBWatcher.m */,
+			);
+			path = KVOBind;
+			sourceTree = "<group>";
+		};
+		58FE845926E88F0200BA0FE1 /* HookBind */ = {
+			isa = PBXGroup;
+			children = (
+				58FE843726E516EA00BA0FE1 /* NSObject+DataBind.h */,
+				58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */,
+				58FE845526E863EC00BA0FE1 /* UIControl+DataBind.h */,
+				58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */,
+				581E7A3F26EAFC7500A3F526 /* VueButton.h */,
+				581E7A4026EAFC7500A3F526 /* VueButton.m */,
+				581E7A4226EAFC8300A3F526 /* VueLabel.h */,
+				581E7A4326EAFC8300A3F526 /* VueLabel.m */,
+				581E7A4526EAFC9200A3F526 /* VueTextField.h */,
+				581E7A4626EAFC9200A3F526 /* VueTextField.m */,
+				58FE844E26E5FFD000BA0FE1 /* VueObserver.h */,
+				58FE844F26E5FFD000BA0FE1 /* VueObserver.m */,
+				58FE844826E5FCE400BA0FE1 /* VueWatcher.h */,
+				58FE844426E5FCE400BA0FE1 /* VueWatcher.m */,
+			);
+			path = HookBind;
+			sourceTree = "<group>";
+		};
+		58FE846126E9E41300BA0FE1 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				58FE846626E9E41300BA0FE1 /* NSObject+YYModel.h */,
+				58FE846426E9E41300BA0FE1 /* NSObject+YYModel.m */,
+				58FE846226E9E41300BA0FE1 /* YYClassInfo.h */,
+				58FE846526E9E41300BA0FE1 /* YYClassInfo.m */,
+				58FE846326E9E41300BA0FE1 /* YYModel.h */,
+			);
+			name = YYModel;
+			path = YYModel/YYModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +275,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */,
+				58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */,
+				58FE843926E516EA00BA0FE1 /* NSObject+DataBind.m in Sources */,
+				58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */,
+				581E7A4126EAFC7500A3F526 /* VueButton.m in Sources */,
+				58FE842726E1D07300BA0FE1 /* Dep.m in Sources */,
 				58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */,
+				58FE844D26E5FCE400BA0FE1 /* VueWatcher.m in Sources */,
+				58FE842D26E21A4B00BA0FE1 /* ObserverViewModel.m in Sources */,
+				58FE846926E9E41400BA0FE1 /* NSObject+YYModel.m in Sources */,
 				58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */,
+				581E7A4426EAFC8300A3F526 /* VueLabel.m in Sources */,
+				58FE846A26E9E41400BA0FE1 /* YYClassInfo.m in Sources */,
+				58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */,
+				58FE843C26E5187600BA0FE1 /* DBTargetFlag.m in Sources */,
+				58FE845026E5FFD000BA0FE1 /* VueObserver.m in Sources */,
+				581E7A4726EAFC9200A3F526 /* VueTextField.m in Sources */,
+				58FE842126E0E05700BA0FE1 /* DBObserver.m in Sources */,
+				58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */,
+				58FE845726E863ED00BA0FE1 /* UIControl+DataBind.m in Sources */,
+				58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */,
 				58FE841626E0CB1100BA0FE1 /* main.m in Sources */,
 				58FE840826E0CB0E00BA0FE1 /* SceneDelegate.m in Sources */,
 			);
