@@ -44,7 +44,7 @@
     self.label = label;
     
     VueButton *button = [VueButton buttonWithType:(UIButtonTypeCustom)];
-    [button setTitle:@"123abc" forState:(UIControlStateNormal)];
+    [button setTitle:@"abc" forState:(UIControlStateNormal)];
     [button setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
     button.frame = CGRectMake(50, 200, 100, 30);
     [button addTarget:self action:@selector(resetAction:) forControlEvents:(UIControlEventTouchUpInside)];

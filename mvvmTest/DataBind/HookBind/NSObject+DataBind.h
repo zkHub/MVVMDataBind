@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "DBTargetFlag.h"
 #import "VueWatcher.h"
-#import "DataBind.h"
 #import "VueObserver.h"
 
 
