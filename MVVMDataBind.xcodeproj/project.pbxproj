@@ -42,7 +42,7 @@
 		581E7A4326EAFC8300A3F526 /* VueLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueLabel.m; sourceTree = "<group>"; };
 		581E7A4526EAFC9200A3F526 /* VueTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueTextField.h; sourceTree = "<group>"; };
 		581E7A4626EAFC9200A3F526 /* VueTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueTextField.m; sourceTree = "<group>"; };
-		58FE840026E0CB0E00BA0FE1 /* mvvmTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FE840026E0CB0E00BA0FE1 /* MVVMDataBind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDataBind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FE840326E0CB0E00BA0FE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		58FE840626E0CB0E00BA0FE1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		58FE83F726E0CB0E00BA0FE1 = {
 			isa = PBXGroup;
 			children = (
-				58FE840226E0CB0E00BA0FE1 /* mvvmTest */,
+				58FE840226E0CB0E00BA0FE1 /* MVVMDataBind */,
 				58FE840126E0CB0E00BA0FE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,12 +111,12 @@
 		58FE840126E0CB0E00BA0FE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58FE840026E0CB0E00BA0FE1 /* mvvmTest.app */,
+				58FE840026E0CB0E00BA0FE1 /* MVVMDataBind.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		58FE840226E0CB0E00BA0FE1 /* mvvmTest */ = {
+		58FE840226E0CB0E00BA0FE1 /* MVVMDataBind */ = {
 			isa = PBXGroup;
 			children = (
 				58FE846126E9E41300BA0FE1 /* YYModel */,
@@ -145,7 +145,7 @@
 				58FE841426E0CB1100BA0FE1 /* Info.plist */,
 				58FE841526E0CB1100BA0FE1 /* main.m */,
 			);
-			path = mvvmTest;
+			path = MVVMDataBind;
 			sourceTree = "<group>";
 		};
 		58FE844026E5FCE300BA0FE1 /* DataBind */ = {
@@ -209,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58FE83FF26E0CB0E00BA0FE1 /* mvvmTest */ = {
+		58FE83FF26E0CB0E00BA0FE1 /* MVVMDataBind */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58FE841926E0CB1100BA0FE1 /* Build configuration list for PBXNativeTarget "mvvmTest" */;
+			buildConfigurationList = 58FE841926E0CB1100BA0FE1 /* Build configuration list for PBXNativeTarget "MVVMDataBind" */;
 			buildPhases = (
 				58FE83FC26E0CB0E00BA0FE1 /* Sources */,
 				58FE83FD26E0CB0E00BA0FE1 /* Frameworks */,
@@ -221,9 +221,9 @@
 			);
 			dependencies = (
 			);
-			name = mvvmTest;
+			name = MVVMDataBind;
 			productName = mvvmTest;
-			productReference = 58FE840026E0CB0E00BA0FE1 /* mvvmTest.app */;
+			productReference = 58FE840026E0CB0E00BA0FE1 /* MVVMDataBind.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +239,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58FE83FB26E0CB0E00BA0FE1 /* Build configuration list for PBXProject "mvvmTest" */;
+			buildConfigurationList = 58FE83FB26E0CB0E00BA0FE1 /* Build configuration list for PBXProject "MVVMDataBind" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -252,7 +252,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58FE83FF26E0CB0E00BA0FE1 /* mvvmTest */,
+				58FE83FF26E0CB0E00BA0FE1 /* MVVMDataBind */,
 			);
 		};
 /* End PBXProject section */
@@ -442,7 +442,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
-				INFOPLIST_FILE = mvvmTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMDataBind/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
-				INFOPLIST_FILE = mvvmTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMDataBind/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58FE83FB26E0CB0E00BA0FE1 /* Build configuration list for PBXProject "mvvmTest" */ = {
+		58FE83FB26E0CB0E00BA0FE1 /* Build configuration list for PBXProject "MVVMDataBind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58FE841726E0CB1100BA0FE1 /* Debug */,
@@ -483,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58FE841926E0CB1100BA0FE1 /* Build configuration list for PBXNativeTarget "mvvmTest" */ = {
+		58FE841926E0CB1100BA0FE1 /* Build configuration list for PBXNativeTarget "MVVMDataBind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58FE841A26E0CB1100BA0FE1 /* Debug */,
