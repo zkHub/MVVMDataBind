@@ -1,5 +1,5 @@
 //
-//  VueButton.h
+//  WXDBTextField.h
 //  mvvmTest
 //
 //  Created by zk on 2021/9/10.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VueButton : UIButton
+@interface WXDBTextField : UITextField
 
 @end
 

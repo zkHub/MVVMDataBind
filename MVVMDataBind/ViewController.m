@@ -9,18 +9,18 @@
 #import "ViewModel.h"
 #import "TestView.h"
 #import "DataBind.h"
-#import "VueObserver.h"
-#import "VueButton.h"
-#import "VueLabel.h"
-#import "VueTextField.h"
+#import "WXDBObserver.h"
+#import "WXDBButton.h"
+#import "WXDBLabel.h"
+#import "WXDBTextField.h"
 
 @interface ViewController ()<UITextFieldDelegate>
-@property (strong, nonatomic) VueTextField *textField;
-@property (strong, nonatomic) VueLabel *label;
-@property (nonatomic, strong) VueButton *button;
+@property (strong, nonatomic) WXDBTextField *textField;
+@property (strong, nonatomic) WXDBLabel *label;
+@property (nonatomic, strong) WXDBButton *button;
 
 @property (nonatomic, strong) ViewModel *vm;
-@property (nonatomic, strong) VueObserver *vueObserver;
+@property (nonatomic, strong) WXDBObserver *vueObserver;
 
 @end
 
@@ -32,18 +32,18 @@
     ViewModel *vm = [ViewModel new];
     self.vm = vm;
     
-    VueTextField *textField = [[VueTextField alloc] initWithFrame:CGRectMake(50, 100, 100, 40)];
+    WXDBTextField *textField = [[WXDBTextField alloc] initWithFrame:CGRectMake(50, 100, 100, 40)];
     textField.delegate = self;
     textField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:textField];
     self.textField = textField;
     
-    VueLabel *label = [[VueLabel alloc] initWithFrame:CGRectMake(200, 100, 100, 40)];
+    WXDBLabel *label = [[WXDBLabel alloc] initWithFrame:CGRectMake(200, 100, 100, 40)];
     label.text = @"12";
     [self.view addSubview:label];
     self.label = label;
     
-    VueButton *button = [VueButton buttonWithType:(UIButtonTypeCustom)];
+    WXDBButton *button = [WXDBButton buttonWithType:(UIButtonTypeCustom)];
     [button setTitle:@"abc" forState:(UIControlStateNormal)];
     [button setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
     button.frame = CGRectMake(50, 200, 100, 30);
@@ -51,21 +51,21 @@
     [self.view addSubview:button];
     self.button = button;
     
-    self.vueObserver = VueObserver.bindConvert(self.label, @"text", ^(NSString * string) {
+    self.vueObserver = WXDBObserver.bindConvert(self.label, @"text", ^(NSString * string) {
         NSLog(@"change--%@", string);
         return string;
-    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress");
+    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress").bind(self.vm, @"nsNum");
     
 }
 
 - (void)resetAction:(id)sender {
-    self.vm.title = @"abc";
-    NSLog(@"num-%@, title-%@, progress=%@", @(self.vm.num), self.vm.title, @(self.vm.progress));
+    self.vm.nsNum = [NSNumber numberWithFloat:1.234];
+    NSLog(@"num-%@, title-%@, progress-%@, nsNum-%@", @(self.vm.num), self.vm.title, @(self.vm.progress), self.vm.nsNum);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.textField endEditing:YES];
-    NSLog(@"num-%@, title-%@, progress=%@", @(self.vm.num), self.vm.title, @(self.vm.progress));
+    NSLog(@"num-%@, title-%@, progress-%@, nsNum-%@", @(self.vm.num), self.vm.title, @(self.vm.progress), self.vm.nsNum);
     return YES;
 }
 

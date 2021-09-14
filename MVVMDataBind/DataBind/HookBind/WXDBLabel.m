@@ -1,13 +1,13 @@
 //
-//  VueTextField.m
+//  WXDBLabel.m
 //  mvvmTest
 //
 //  Created by zk on 2021/9/10.
 //
 
-#import "VueTextField.h"
+#import "WXDBLabel.h"
 
-@implementation VueTextField
+@implementation WXDBLabel
 
 /*
 // Only override drawRect: if you perform custom drawing.

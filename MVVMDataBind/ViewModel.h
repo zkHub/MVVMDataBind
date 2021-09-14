@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) NSInteger num;
 @property (nonatomic, assign) float progress;
+@property (nonatomic, strong) NSNumber *nsNum;
 
 @end
 

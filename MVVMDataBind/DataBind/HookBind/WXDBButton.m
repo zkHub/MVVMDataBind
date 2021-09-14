@@ -1,13 +1,13 @@
 //
-//  VueLabel.m
+//  WXDBButton.m
 //  mvvmTest
 //
 //  Created by zk on 2021/9/10.
 //
 
-#import "VueLabel.h"
+#import "WXDBButton.h"
 
-@implementation VueLabel
+@implementation WXDBButton
 
 /*
 // Only override drawRect: if you perform custom drawing.

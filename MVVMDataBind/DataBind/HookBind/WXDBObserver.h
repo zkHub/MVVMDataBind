@@ -1,5 +1,5 @@
 //
-//  VueObserver.h
+//  WXDBObserver.h
 //  mvvmTest
 //
 //  Created by zk on 2021/9/6.
@@ -8,24 +8,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class VueObserver;
-
-
+@class WXDBObserver;
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef id _Nullable (^VueDBAnyBlock)(id value);
-typedef VueObserver *_Nonnull(^VueDBOberverBlock)(id target, NSString *keyPath);
-typedef VueObserver *_Nonnull(^VueDBOberverUIBlock)(id target, NSString *keyPath, UIControlEvents event);
-typedef VueObserver *_Nonnull(^VueDBOberverConvertBlock)(id target, NSString *property, VueDBAnyBlock block);
-typedef VueObserver *_Nonnull(^VueDBOberverUIConvertBlock)(id target, NSString *property, UIControlEvents controlEvent, VueDBAnyBlock block);
+typedef WXDBObserver *_Nonnull(^VueDBOberverBlock)(id target, NSString *keyPath);
+typedef WXDBObserver *_Nonnull(^VueDBOberverUIBlock)(id target, NSString *keyPath, UIControlEvents event);
+typedef WXDBObserver *_Nonnull(^VueDBOberverConvertBlock)(id target, NSString *property, VueDBAnyBlock block);
+typedef WXDBObserver *_Nonnull(^VueDBOberverUIConvertBlock)(id target, NSString *property, UIControlEvents controlEvent, VueDBAnyBlock block);
 
 
-@interface VueObserver : NSObject
-
-
-
-
+@interface WXDBObserver : NSObject
 
 + (VueDBOberverBlock)bind;
 + (VueDBOberverUIBlock)bindUI;
@@ -36,7 +30,6 @@ typedef VueObserver *_Nonnull(^VueDBOberverUIConvertBlock)(id target, NSString *
 - (VueDBOberverUIBlock)bindUI;
 - (VueDBOberverConvertBlock)bindConvert;
 - (VueDBOberverUIConvertBlock)bindUIConvert;
-
 
 
 - (void)bindWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock;

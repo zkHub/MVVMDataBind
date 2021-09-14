@@ -1,26 +1,27 @@
 //
-//  VueWatcher.h
+//  WXDBWatcher.h
 //  VueIOS
 //
 //  Created by guoyuze on 2021/9/2.
 //
 
 #import <Foundation/Foundation.h>
-#import "VueObserver.h"
+#import "WXDBObserver.h"
 
-@class VueWatcher;
+@class WXDBWatcher;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol VupDepDelegate <NSObject>
 
-- (void)updateValue:(id)value dep:(VueWatcher*)dep;
+- (void)updateValue:(id)value watcher:(WXDBWatcher*)watcher;
 
 @end
 
 
-@interface VueWatcher : NSObject
+@interface WXDBWatcher : NSObject
 @property (nonatomic, weak) id<VupDepDelegate> observer;
+@property (nonatomic, weak, readonly) id target;
 
 - (instancetype)initWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock;
 - (void)notify;

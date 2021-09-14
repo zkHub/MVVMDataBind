@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		581E7A4126EAFC7500A3F526 /* VueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4026EAFC7500A3F526 /* VueButton.m */; };
-		581E7A4426EAFC8300A3F526 /* VueLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4326EAFC8300A3F526 /* VueLabel.m */; };
-		581E7A4726EAFC9200A3F526 /* VueTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4626EAFC9200A3F526 /* VueTextField.m */; };
+		581E7A4126EAFC7500A3F526 /* WXDBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4026EAFC7500A3F526 /* WXDBButton.m */; };
+		581E7A4426EAFC8300A3F526 /* WXDBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4326EAFC8300A3F526 /* WXDBLabel.m */; };
+		581E7A4726EAFC9200A3F526 /* WXDBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E7A4626EAFC9200A3F526 /* WXDBTextField.m */; };
 		58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */; };
 		58FE840826E0CB0E00BA0FE1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840726E0CB0E00BA0FE1 /* SceneDelegate.m */; };
 		58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE840A26E0CB0E00BA0FE1 /* ViewController.m */; };
@@ -26,22 +26,22 @@
 		58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842F26E4B21500BA0FE1 /* ObserverManager.m */; };
 		58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843226E4B2B600BA0FE1 /* DataBind.m */; };
 		58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843526E513B600BA0FE1 /* DBWatcher.m */; };
-		58FE843926E516EA00BA0FE1 /* NSObject+DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */; };
+		58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */; };
 		58FE843C26E5187600BA0FE1 /* DBTargetFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843B26E5187600BA0FE1 /* DBTargetFlag.m */; };
-		58FE844D26E5FCE400BA0FE1 /* VueWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844426E5FCE400BA0FE1 /* VueWatcher.m */; };
-		58FE845026E5FFD000BA0FE1 /* VueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844F26E5FFD000BA0FE1 /* VueObserver.m */; };
-		58FE845726E863ED00BA0FE1 /* UIControl+DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */; };
+		58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */; };
+		58FE845026E5FFD000BA0FE1 /* WXDBObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844F26E5FFD000BA0FE1 /* WXDBObserver.m */; };
+		58FE845726E863ED00BA0FE1 /* UIControl+WXDataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE845626E863ED00BA0FE1 /* UIControl+WXDataBind.m */; };
 		58FE846926E9E41400BA0FE1 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE846426E9E41300BA0FE1 /* NSObject+YYModel.m */; };
 		58FE846A26E9E41400BA0FE1 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE846526E9E41300BA0FE1 /* YYClassInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		581E7A3F26EAFC7500A3F526 /* VueButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueButton.h; sourceTree = "<group>"; };
-		581E7A4026EAFC7500A3F526 /* VueButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueButton.m; sourceTree = "<group>"; };
-		581E7A4226EAFC8300A3F526 /* VueLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueLabel.h; sourceTree = "<group>"; };
-		581E7A4326EAFC8300A3F526 /* VueLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueLabel.m; sourceTree = "<group>"; };
-		581E7A4526EAFC9200A3F526 /* VueTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueTextField.h; sourceTree = "<group>"; };
-		581E7A4626EAFC9200A3F526 /* VueTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueTextField.m; sourceTree = "<group>"; };
+		581E7A3F26EAFC7500A3F526 /* WXDBButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBButton.h; sourceTree = "<group>"; };
+		581E7A4026EAFC7500A3F526 /* WXDBButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDBButton.m; sourceTree = "<group>"; };
+		581E7A4226EAFC8300A3F526 /* WXDBLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBLabel.h; sourceTree = "<group>"; };
+		581E7A4326EAFC8300A3F526 /* WXDBLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDBLabel.m; sourceTree = "<group>"; };
+		581E7A4526EAFC9200A3F526 /* WXDBTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBTextField.h; sourceTree = "<group>"; };
+		581E7A4626EAFC9200A3F526 /* WXDBTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDBTextField.m; sourceTree = "<group>"; };
 		58FE840026E0CB0E00BA0FE1 /* MVVMDataBind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDataBind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FE840326E0CB0E00BA0FE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58FE840426E0CB0E00BA0FE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,16 +72,16 @@
 		58FE843226E4B2B600BA0FE1 /* DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBind.m; sourceTree = "<group>"; };
 		58FE843426E513B600BA0FE1 /* DBWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBWatcher.h; sourceTree = "<group>"; };
 		58FE843526E513B600BA0FE1 /* DBWatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBWatcher.m; sourceTree = "<group>"; };
-		58FE843726E516EA00BA0FE1 /* NSObject+DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DataBind.h"; sourceTree = "<group>"; };
-		58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DataBind.m"; sourceTree = "<group>"; };
+		58FE843726E516EA00BA0FE1 /* NSObject+WXDataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXDataBind.h"; sourceTree = "<group>"; };
+		58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXDataBind.m"; sourceTree = "<group>"; };
 		58FE843A26E5187600BA0FE1 /* DBTargetFlag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBTargetFlag.h; sourceTree = "<group>"; };
 		58FE843B26E5187600BA0FE1 /* DBTargetFlag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBTargetFlag.m; sourceTree = "<group>"; };
-		58FE844426E5FCE400BA0FE1 /* VueWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VueWatcher.m; sourceTree = "<group>"; };
-		58FE844826E5FCE400BA0FE1 /* VueWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VueWatcher.h; sourceTree = "<group>"; };
-		58FE844E26E5FFD000BA0FE1 /* VueObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VueObserver.h; sourceTree = "<group>"; };
-		58FE844F26E5FFD000BA0FE1 /* VueObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VueObserver.m; sourceTree = "<group>"; };
-		58FE845526E863EC00BA0FE1 /* UIControl+DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+DataBind.h"; sourceTree = "<group>"; };
-		58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+DataBind.m"; sourceTree = "<group>"; };
+		58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBWatcher.m; sourceTree = "<group>"; };
+		58FE844826E5FCE400BA0FE1 /* WXDBWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBWatcher.h; sourceTree = "<group>"; };
+		58FE844E26E5FFD000BA0FE1 /* WXDBObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBObserver.h; sourceTree = "<group>"; };
+		58FE844F26E5FFD000BA0FE1 /* WXDBObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDBObserver.m; sourceTree = "<group>"; };
+		58FE845526E863EC00BA0FE1 /* UIControl+WXDataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+WXDataBind.h"; sourceTree = "<group>"; };
+		58FE845626E863ED00BA0FE1 /* UIControl+WXDataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+WXDataBind.m"; sourceTree = "<group>"; };
 		58FE846226E9E41300BA0FE1 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
 		58FE846326E9E41300BA0FE1 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		58FE846426E9E41300BA0FE1 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
@@ -175,20 +175,20 @@
 		58FE845926E88F0200BA0FE1 /* HookBind */ = {
 			isa = PBXGroup;
 			children = (
-				58FE843726E516EA00BA0FE1 /* NSObject+DataBind.h */,
-				58FE843826E516EA00BA0FE1 /* NSObject+DataBind.m */,
-				58FE845526E863EC00BA0FE1 /* UIControl+DataBind.h */,
-				58FE845626E863ED00BA0FE1 /* UIControl+DataBind.m */,
-				581E7A3F26EAFC7500A3F526 /* VueButton.h */,
-				581E7A4026EAFC7500A3F526 /* VueButton.m */,
-				581E7A4226EAFC8300A3F526 /* VueLabel.h */,
-				581E7A4326EAFC8300A3F526 /* VueLabel.m */,
-				581E7A4526EAFC9200A3F526 /* VueTextField.h */,
-				581E7A4626EAFC9200A3F526 /* VueTextField.m */,
-				58FE844E26E5FFD000BA0FE1 /* VueObserver.h */,
-				58FE844F26E5FFD000BA0FE1 /* VueObserver.m */,
-				58FE844826E5FCE400BA0FE1 /* VueWatcher.h */,
-				58FE844426E5FCE400BA0FE1 /* VueWatcher.m */,
+				58FE843726E516EA00BA0FE1 /* NSObject+WXDataBind.h */,
+				58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */,
+				58FE845526E863EC00BA0FE1 /* UIControl+WXDataBind.h */,
+				58FE845626E863ED00BA0FE1 /* UIControl+WXDataBind.m */,
+				581E7A3F26EAFC7500A3F526 /* WXDBButton.h */,
+				581E7A4026EAFC7500A3F526 /* WXDBButton.m */,
+				581E7A4226EAFC8300A3F526 /* WXDBLabel.h */,
+				581E7A4326EAFC8300A3F526 /* WXDBLabel.m */,
+				581E7A4526EAFC9200A3F526 /* WXDBTextField.h */,
+				581E7A4626EAFC9200A3F526 /* WXDBTextField.m */,
+				58FE844E26E5FFD000BA0FE1 /* WXDBObserver.h */,
+				58FE844F26E5FFD000BA0FE1 /* WXDBObserver.m */,
+				58FE844826E5FCE400BA0FE1 /* WXDBWatcher.h */,
+				58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */,
 			);
 			path = HookBind;
 			sourceTree = "<group>";
@@ -277,24 +277,24 @@
 			files = (
 				58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */,
 				58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */,
-				58FE843926E516EA00BA0FE1 /* NSObject+DataBind.m in Sources */,
+				58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */,
 				58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */,
-				581E7A4126EAFC7500A3F526 /* VueButton.m in Sources */,
+				581E7A4126EAFC7500A3F526 /* WXDBButton.m in Sources */,
 				58FE842726E1D07300BA0FE1 /* Dep.m in Sources */,
 				58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */,
-				58FE844D26E5FCE400BA0FE1 /* VueWatcher.m in Sources */,
+				58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */,
 				58FE842D26E21A4B00BA0FE1 /* ObserverViewModel.m in Sources */,
 				58FE846926E9E41400BA0FE1 /* NSObject+YYModel.m in Sources */,
 				58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */,
-				581E7A4426EAFC8300A3F526 /* VueLabel.m in Sources */,
+				581E7A4426EAFC8300A3F526 /* WXDBLabel.m in Sources */,
 				58FE846A26E9E41400BA0FE1 /* YYClassInfo.m in Sources */,
 				58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */,
 				58FE843C26E5187600BA0FE1 /* DBTargetFlag.m in Sources */,
-				58FE845026E5FFD000BA0FE1 /* VueObserver.m in Sources */,
-				581E7A4726EAFC9200A3F526 /* VueTextField.m in Sources */,
+				58FE845026E5FFD000BA0FE1 /* WXDBObserver.m in Sources */,
+				581E7A4726EAFC9200A3F526 /* WXDBTextField.m in Sources */,
 				58FE842126E0E05700BA0FE1 /* DBObserver.m in Sources */,
 				58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */,
-				58FE845726E863ED00BA0FE1 /* UIControl+DataBind.m in Sources */,
+				58FE845726E863ED00BA0FE1 /* UIControl+WXDataBind.m in Sources */,
 				58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */,
 				58FE841626E0CB1100BA0FE1 /* main.m in Sources */,
 				58FE840826E0CB0E00BA0FE1 /* SceneDelegate.m in Sources */,
