@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol VupDepDelegate <NSObject>
 
 - (void)updateValue:(id)value watcher:(WXDBWatcher*)watcher;
+- (void)removeWathcer:(WXDBWatcher *)watcher;
 
 @end
 
@@ -22,8 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WXDBWatcher : NSObject
 @property (nonatomic, weak) id<VupDepDelegate> observer;
 @property (nonatomic, weak, readonly) id target;
+@property (nonatomic, copy, readonly) NSString *watcherKey;
 
-- (instancetype)initWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock;
+- (instancetype)initWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock;
 - (void)notify;
 - (void)updateValue:(id)vaule;
 

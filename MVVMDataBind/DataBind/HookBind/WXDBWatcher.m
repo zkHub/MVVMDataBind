@@ -6,23 +6,32 @@
 //
 
 #import "WXDBWatcher.h"
-#import "YYModel.h"
 #import <objc/runtime.h>
 #import "NSObject+WXDataBind.h"
+#import "WXDataBindTools.h"
+#import "WXDBTargetFlag.h"
+
 
 @interface WXDBWatcher ()
 @property (nonatomic, weak) id target;
 @property (nonatomic, copy) NSString *keyPath;
-@property (nonatomic, copy) VueDBAnyBlock convertBlock;
+@property (nonatomic, copy) WXDBAnyBlock convertBlock;
+@property (nonatomic, copy) NSString *watcherKey;
+
+@property (nonatomic, strong) WXDBTargetFlag *db_targetFlag;
 
 @end
+
+
+
 @implementation WXDBWatcher
 
 
-- (instancetype)initWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock {
+- (instancetype)initWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock {
     if(self = [super init]){
         self.target = target;
         self.keyPath = keyPath;
+        self.watcherKey = [target watcherKeyWithKeyPath:keyPath];
         self.convertBlock = convertBlock;
     }
     return self;
@@ -51,9 +60,9 @@
     id tempValue = nil;
     objc_property_t property = class_getProperty([self.target class], self.keyPath.UTF8String);
     const char *property_attr = property_copyAttributeValue(property, "T");
-    YYEncodingType targetPropertyType = YYEncodingGetType(property_attr);
+    WXDBEncodingType targetPropertyType = WXDBEncodingGetType(property_attr);
     switch (targetPropertyType) {
-        case YYEncodingTypeObject: {
+        case WXDBEncodingTypeObject: {
             NSString *attr = [NSString stringWithUTF8String:property_attr];
             if ([attr containsString:@"NSString"]) {
                 if ([vaule isKindOfClass:NSString.class]) {
@@ -65,22 +74,23 @@
                 if ([vaule isKindOfClass:NSNumber.class]) {
                     tempValue = vaule;
                 } else if ([vaule isKindOfClass:NSString.class]) {
-                    tempValue = YYNSNumberCreateFromID(vaule);
+                    tempValue = WXDBNSNumberCreateFromID(vaule);
                 }
             }
         } break;
-        case YYEncodingTypeInt8:
-        case YYEncodingTypeUInt8:
-        case YYEncodingTypeInt16:
-        case YYEncodingTypeUInt16:
-        case YYEncodingTypeInt32:
-        case YYEncodingTypeUInt32:
-        case YYEncodingTypeInt64:
-        case YYEncodingTypeUInt64:
-        case YYEncodingTypeFloat:
-        case YYEncodingTypeDouble:{
+        case WXDBEncodingTypeBool:
+        case WXDBEncodingTypeInt8:
+        case WXDBEncodingTypeUInt8:
+        case WXDBEncodingTypeInt16:
+        case WXDBEncodingTypeUInt16:
+        case WXDBEncodingTypeInt32:
+        case WXDBEncodingTypeUInt32:
+        case WXDBEncodingTypeInt64:
+        case WXDBEncodingTypeUInt64:
+        case WXDBEncodingTypeFloat:
+        case WXDBEncodingTypeDouble:{
             if ([vaule isKindOfClass:NSString.class]) {
-                tempValue = YYNSNumberCreateFromID(vaule);
+                tempValue = WXDBNSNumberCreateFromID(vaule);
             } else if ([vaule isKindOfClass:NSNumber.class]) {
                 tempValue = vaule;
             }

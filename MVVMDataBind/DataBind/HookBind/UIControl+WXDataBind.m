@@ -19,18 +19,18 @@
     objc_setAssociatedObject(self, @selector(db_ctrl_bindKeyPath), db_ctrl_bindKeyPath, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (WXDBWatcher *)addBindUIObserverWithKeyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(VueDBAnyBlock)convertBlock {
+- (WXDBWatcher *)addBindUIObserverWithKeyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock {
     [self addTarget:self action:@selector(valueChange:) forControlEvents:(controlEvent)];
-    WXDBWatcher *dep = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
-    [self addDep:dep key:keyPath];
+    WXDBWatcher *watcher = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
+    [self setWatcher:watcher forKey:[self watcherKeyWithKeyPath:keyPath]];
     self.db_ctrl_bindKeyPath = keyPath;
-    return dep;
+    return watcher;
 }
 
 - (void)valueChange:(UIControl *)target {
-    WXDBWatcher *dep = [self depForKey:self.db_ctrl_bindKeyPath];
-    if (dep) {
-        [dep notify];
+    WXDBWatcher *watcher = [self watcherForKey:[self watcherKeyWithKeyPath:self.db_ctrl_bindKeyPath]];
+    if (watcher) {
+        [watcher notify];
     }
 }
 

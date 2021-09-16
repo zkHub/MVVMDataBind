@@ -10,10 +10,11 @@
 #import <objc/message.h>
 #import "WXDBWatcher.h"
 #import <UIKit/UIKit.h>
+#import "WXDBWatcherContainer.h"
 
 
 @interface NSObject ()
-@property (nonatomic,strong) NSMutableDictionary <NSString*,WXDBWatcher*> *depList;
+@property (nonatomic, strong) WXDBWatcherContainer *watcherContainer;
 
 @end
 
@@ -21,7 +22,7 @@
 @implementation NSObject (WXDataBind)
 
 - (BOOL)db_isDidChanged {
-    NSNumber *boolValue = objc_getAssociatedObject(self, _cmd);
+    NSNumber *boolValue = objc_getAssociatedObject(self, @selector(db_isDidChanged));
     return [boolValue boolValue];
 }
 
@@ -29,16 +30,28 @@
     objc_setAssociatedObject(self, @selector(db_isDidChanged), @(db_isDidChanged), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setDepList:(NSMutableDictionary<NSString *,WXDBWatcher *> *)depList {
-    objc_setAssociatedObject(self, @selector(depList), depList, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (WXDBWatcherContainer *)watcherContainer {
+    return objc_getAssociatedObject(self, @selector(watcherContainer));
 }
 
-- (NSMutableDictionary<NSString *,WXDBWatcher *> *)depList {
-    return objc_getAssociatedObject(self, @selector(depList));
+- (void)setWatcherContainer:(WXDBWatcherContainer *)watcherContainer {
+    objc_setAssociatedObject(self, @selector(watcherContainer), watcherContainer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+//- (WXDBTargetFlag *)db_targetFlag {
+//    return objc_getAssociatedObject(self, @selector(db_targetFlag));
+//}
+//
+//- (void)setDb_targetFlag:(WXDBTargetFlag *)db_targetFlag {
+//    objc_setAssociatedObject(self, @selector(db_targetFlag), db_targetFlag, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+
+- (NSString *)watcherKeyWithKeyPath:(NSString *)keyPath {
+    return [NSString stringWithFormat:@"%@_%@", @([self hash]), keyPath];
 }
 
 
-- (WXDBWatcher *)addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock {
+- (WXDBWatcher *)addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock {
     
     NSString *capitalStr = [NSString stringWithFormat:@"%@%@", [[keyPath substringToIndex:1] uppercaseString], [keyPath substringFromIndex:1]];
     const char * swizzledSELName = [[NSString stringWithFormat:@"wx_set%@:", capitalStr] cStringUsingEncoding:NSUTF8StringEncoding];
@@ -101,41 +114,15 @@
         class_replaceMethod(self.class, originalSEL, swizzledImp, method_getTypeEncoding(originalMethod));
     }
     //给key关联 dep
-    WXDBWatcher *dep = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
-    [self addDep:dep key:[self depKeyWithTarget:self keyPath:keyPath]];
-    return dep;
+    WXDBWatcher *watcher = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
+    [self setWatcher:watcher forKey:[self watcherKeyWithKeyPath:keyPath]];
+    return watcher;
 }
 
-#pragma mark - 遍历方法
-- (void)printClassAllMethod:(Class)cls{
-    unsigned int count = 0;
-    Method *methodList = class_copyMethodList(cls, &count);
-    for (int i = 0; i<count; i++) {
-        Method method = methodList[i];
-        SEL sel = method_getName(method);
-        IMP imp = class_getMethodImplementation(cls, sel);
-        NSLog(@"%@-%@-%p",cls,NSStringFromSelector(sel),imp);
-    }
-    free(methodList);
-}
-#pragma mark - 遍历属性-ivar
-- (void)printClassAllIvar:(Class)cls{
-    unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList(cls, &count);
-    for (int i = 0; i<count; i++) {
-        Ivar ivar = ivars[i];
-        NSString *ivarName = [NSString stringWithUTF8String:ivar_getName(ivar)];
-        NSLog(@"%@-%@",cls,ivarName);
-    }
-    free(ivars);
-}
-
-- (WXDBWatcher *)getDepWithSELStr:(NSString *)selStr
-{
-    WXDBWatcher *dep = nil;
-    selStr = [self depKeyWithTarget:self keyPath:[self getKeyPathWithSELStr:selStr]];
-    dep = [self depForKey:selStr];
-    return dep;
+- (WXDBWatcher *)getDepWithSELStr:(NSString *)selStr {
+    selStr = [self watcherKeyWithKeyPath:[self getKeyPathWithSELStr:selStr]];
+    WXDBWatcher *watcher = [self watcherForKey:selStr];
+    return watcher;
 }
 
 - (NSString *)getKeyPathWithSELStr:(NSString *)selStr {
@@ -147,32 +134,28 @@
     return selStr;
 }
 
-- (NSString *)depKeyWithTarget:(id)target keyPath:(NSString *)keyPath {
-    return [NSString stringWithFormat:@"%@_%@", @([target hash]), keyPath];
-}
-
-- (BOOL)addDep:(WXDBWatcher *)dep key:(NSString *)key {
-    if(dep && key){
-        if (!self.depList) {
-            self.depList = [NSMutableDictionary new];
+//MARK: - watcher
+- (void)setWatcher:(WXDBWatcher *)watcher forKey:(NSString *)key {
+    if (watcher && key) {
+        if (!self.watcherContainer) {
+            self.watcherContainer = [WXDBWatcherContainer new];
         }
-        [self.depList setObject:dep forKey:key];
-        return YES;
+        [self.watcherContainer.wathcerMaps setObject:watcher forKey:key];
     }
-    return NO;
 }
 
-- (void)removeDepForKey:(NSString *)key {
-    [self.depList removeObjectForKey:key];
-}
-
-- (WXDBWatcher *)depForKey:(NSString *)key {
-    if(key){
-        return [self.depList objectForKey:key];
+- (WXDBWatcher *)watcherForKey:(NSString *)key {
+    if (key) {
+        return [self.watcherContainer.wathcerMaps objectForKey:key];
     }
     return nil;
 }
 
+- (void)removeWatcherForKey:(NSString *)key {
+    if (key) {
+        [self.watcherContainer.wathcerMaps removeObjectForKey:key];
+    }
+}
 
 
 //MARK: - typeEncoding
@@ -234,7 +217,7 @@ void wx_setObjectValue(id receiver, SEL selecter, id value) {
     [receiver wx_invokeWithSEL:selecter argument:&value];
 }
 
-
+//MARK: - method hook
 - (void)wx_invokeWithSEL:(SEL)selecter argument:(void *)argument {
     const char * swizzledSELName = [[NSString stringWithFormat:@"wx_%@", NSStringFromSelector(selecter)] cStringUsingEncoding:NSUTF8StringEncoding];
     SEL swizzledSEL = sel_registerName(swizzledSELName);

@@ -12,28 +12,40 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef id _Nullable (^VueDBAnyBlock)(id value);
-typedef WXDBObserver *_Nonnull(^VueDBOberverBlock)(id target, NSString *keyPath);
-typedef WXDBObserver *_Nonnull(^VueDBOberverUIBlock)(id target, NSString *keyPath, UIControlEvents event);
-typedef WXDBObserver *_Nonnull(^VueDBOberverConvertBlock)(id target, NSString *property, VueDBAnyBlock block);
-typedef WXDBObserver *_Nonnull(^VueDBOberverUIConvertBlock)(id target, NSString *property, UIControlEvents controlEvent, VueDBAnyBlock block);
+#define keypath(target, keyPath) \
+    (((void)(NO && ((void)target.keyPath, NO)), # keyPath))
+
+
+#define WXDBBind(target, keyPath)                           WXDBObserver.bind(target, @keypath(target, keyPath))
+#define dbBind(target, keyPath)                             bind(target, @keypath(target, keyPath))
+#define dbBindUI(target, keyPath, event)                    bindUI(target, @keypath(target, keyPath), event)
+#define dbBindConvert(target, keyPath, block)               bindConvert(target, @keypath(target, keyPath), block)
+#define dbBindUIConvert(target, keyPath, event, block)      bindUIConvert(target, @keypath(target, keyPath), event, block)
+
+
+typedef id _Nullable (^WXDBAnyBlock)(id value);
+typedef WXDBObserver *_Nonnull(^WXDBOberverBlock)(id target, NSString *keyPath);
+typedef WXDBObserver *_Nonnull(^WXDBOberverUIBlock)(id target, NSString *keyPath, UIControlEvents event);
+typedef WXDBObserver *_Nonnull(^WXDBOberverConvertBlock)(id target, NSString *property, WXDBAnyBlock block);
+typedef WXDBObserver *_Nonnull(^WXDBOberverUIConvertBlock)(id target, NSString *property, UIControlEvents event, WXDBAnyBlock block);
+
 
 
 @interface WXDBObserver : NSObject
 
-+ (VueDBOberverBlock)bind;
-+ (VueDBOberverUIBlock)bindUI;
-+ (VueDBOberverConvertBlock)bindConvert;
-+ (VueDBOberverUIConvertBlock)bindUIConvert;
++ (WXDBOberverBlock)bind;
++ (WXDBOberverUIBlock)bindUI;
++ (WXDBOberverConvertBlock)bindConvert;
++ (WXDBOberverUIConvertBlock)bindUIConvert;
 
-- (VueDBOberverBlock)bind;
-- (VueDBOberverUIBlock)bindUI;
-- (VueDBOberverConvertBlock)bindConvert;
-- (VueDBOberverUIConvertBlock)bindUIConvert;
+- (WXDBOberverBlock)bind;
+- (WXDBOberverUIBlock)bindUI;
+- (WXDBOberverConvertBlock)bindConvert;
+- (WXDBOberverUIConvertBlock)bindUIConvert;
 
 
-- (void)bindWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock;
-- (void)bindWithTarget:(UIControl *)target keyPath:(NSString *)keyPath controlEvent:(UIControlEvents)controlEvent convertBlock:(VueDBAnyBlock)convertBlock;
+- (void)bindWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock _Nullable)convertBlock;
+- (void)bindWithTarget:(UIControl *)target keyPath:(NSString *)keyPath controlEvent:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock _Nullable)convertBlock;
 
 @end
 

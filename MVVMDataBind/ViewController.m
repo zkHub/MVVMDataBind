@@ -51,12 +51,43 @@
     [self.view addSubview:button];
     self.button = button;
     
-    self.vueObserver = WXDBObserver.bindConvert(self.label, @"text", ^(NSString * string) {
+//    self.vueObserver = WXDBObserver.bindConvert(self.label, @"text", ^(NSString * string) {
+//        NSLog(@"change--%@", string);
+//        return string;
+//    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress").bind(self.vm, @"nsNum");
+    
+    MAX(1, 2);
+    
+    self.vueObserver = WXDBBind(self.vm, num).dbBindConvert(self.label, text, ^(NSString * string) {
         NSLog(@"change--%@", string);
         return string;
-    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress").bind(self.vm, @"nsNum");
+    }).dbBindUI(self.textField, text, UIControlEventEditingChanged).dbBind(self.vm, title).dbBind(self.vm, progress).dbBind(self.vm, nsNum);
     
+    
+    UIButton *removeBtn1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [removeBtn1 setTitle:@"removeLabel" forState:(UIControlStateNormal)];
+    [removeBtn1 setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
+    [removeBtn1 addTarget:self action:@selector(removeLabel) forControlEvents:(UIControlEventTouchUpInside)];
+    removeBtn1.frame = CGRectMake(50, 250, 100, 30);
+    [self.view addSubview:removeBtn1];
+    
+    UIButton *removeBtn2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [removeBtn2 setTitle:@"removeObserver" forState:(UIControlStateNormal)];
+    [removeBtn2 setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
+    [removeBtn2 addTarget:self action:@selector(removeObserver) forControlEvents:(UIControlEventTouchUpInside)];
+    removeBtn2.frame = CGRectMake(200, 250, 100, 30);
+    [self.view addSubview:removeBtn2];
 }
+
+- (void)removeLabel{
+    [self.label removeFromSuperview];
+    self.label = nil;
+}
+
+- (void)removeObserver {
+    self.vueObserver = nil;
+}
+
 
 - (void)resetAction:(id)sender {
     self.vm.nsNum = [NSNumber numberWithFloat:1.234];

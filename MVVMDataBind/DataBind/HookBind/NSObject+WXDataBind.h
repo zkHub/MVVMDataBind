@@ -6,26 +6,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DBTargetFlag.h"
+#import "WXDBTargetFlag.h"
 #import "WXDBWatcher.h"
-#import "WXDBObserver.h"
-
-
-
-
-
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (WXDataBind)
 @property(nonatomic, assign) BOOL db_isDidChanged;
+//@property (nonatomic, strong) WXDBTargetFlag *db_targetFlag;
 
-- (WXDBWatcher *)addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(VueDBAnyBlock)convertBlock;
+- (WXDBWatcher *)addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock;
 
-- (BOOL)addDep:(WXDBWatcher *)dep key:(NSString *)key;
-- (void)removeDep:(WXDBWatcher *)dep;
-- (WXDBWatcher *)depForKey:(NSString *)key;
+
+- (NSString *)watcherKeyWithKeyPath:(NSString *)keyPath;
+- (void)setWatcher:(WXDBWatcher *)watcher forKey:(NSString *)key;
+- (WXDBWatcher *)watcherForKey:(NSString *)key;
+- (void)removeWatcherForKey:(NSString *)key;
 
 @end
 
