@@ -55,9 +55,7 @@
 //        NSLog(@"change--%@", string);
 //        return string;
 //    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress").bind(self.vm, @"nsNum");
-    
-    MAX(1, 2);
-    
+        
     self.vueObserver = WXDBBind(self.vm, num).dbBindConvert(self.label, text, ^(NSString * string) {
         NSLog(@"change--%@", string);
         return string;
