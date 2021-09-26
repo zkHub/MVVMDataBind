@@ -20,7 +20,7 @@
     return objc_getAssociatedObject(self, @selector(db_ctrlBindKeyPath));
 }
 
-- (void)setdb_ctrlBindKeyPath:(NSString *)db_ctrlBindKeyPath {
+- (void)setDb_ctrlBindKeyPath:(NSString *)db_ctrlBindKeyPath {
     objc_setAssociatedObject(self, @selector(db_ctrlBindKeyPath), db_ctrlBindKeyPath, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
