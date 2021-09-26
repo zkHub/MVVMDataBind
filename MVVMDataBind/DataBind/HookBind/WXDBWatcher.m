@@ -31,12 +31,16 @@
     if(self = [super init]){
         self.target = target;
         self.keyPath = keyPath;
-        self.watcherKey = [target watcherKeyWithKeyPath:keyPath];
+        self.watcherKey = [target db_watcherKeyWithKeyPath:keyPath];
         self.convertBlock = convertBlock;
     }
     return self;
 }
 
+- (void)setObserver:(id<VupDepDelegate>)observer {
+    _observer = observer;
+    ((NSObject *)self.target).db_observer = observer;
+}
 
 - (void)notify {
     if (self.db_isDidChanged) {

@@ -7,10 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class WXDBWatcher;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WXDBWatcherContainer : NSObject
-@property (nonatomic, strong) NSMutableDictionary *wathcerMaps;
+
+- (void)setWathcer:(WXDBWatcher *)watcher forKey:(NSString *)key;
+- (WXDBWatcher *)watcherForKey:(NSString *)key;
+- (void)removeWatcherForKey:(NSString *)key;
+- (void)removeAllWathers;
 
 @end
 

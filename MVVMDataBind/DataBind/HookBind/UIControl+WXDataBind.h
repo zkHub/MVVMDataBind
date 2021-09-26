@@ -12,10 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIControl (WXDataBind)
 
-@property(nonatomic, copy) NSString *db_ctrl_bindKeyPath;
-
-
-- (WXDBWatcher *)addBindUIObserverWithKeyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock;
+- (WXDBWatcher *)db_addBindUIObserverWithKeyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock;
 
 @end
 

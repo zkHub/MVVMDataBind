@@ -63,9 +63,9 @@
 
 #else
 - (void)bindWithTarget:(id)target keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock {
-    NSString *watcherKey = [target watcherKeyWithKeyPath:keyPath];
+    NSString *watcherKey = [target db_watcherKeyWithKeyPath:keyPath];
     if (![self.watcherMaps.allKeys containsObject:watcherKey]) {
-        WXDBWatcher *wathcer = [target addBindObserverWithKeyPath:keyPath convertBlock:convertBlock];
+        WXDBWatcher *wathcer = [target db_addBindObserverWithKeyPath:keyPath convertBlock:convertBlock];
         wathcer.observer = self;
         if (wathcer) {
             [self.watcherMaps setObject:wathcer forKey:watcherKey];
@@ -74,9 +74,9 @@
 }
 
 - (void)bindWithTarget:(UIControl *)target keyPath:(NSString *)keyPath controlEvent:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock {
-    NSString *watcherKey = [target watcherKeyWithKeyPath:keyPath];
+    NSString *watcherKey = [target db_watcherKeyWithKeyPath:keyPath];
     if (![self.watcherMaps.allKeys containsObject:watcherKey]) {
-        WXDBWatcher *wathcer = [target addBindUIObserverWithKeyPath:keyPath forControlEvents:controlEvent convertBlock:convertBlock];
+        WXDBWatcher *wathcer = [target db_addBindUIObserverWithKeyPath:keyPath forControlEvents:controlEvent convertBlock:convertBlock];
         wathcer.observer = self;
         if (wathcer) {
             [self.watcherMaps setObject:wathcer forKey:watcherKey];
@@ -173,7 +173,7 @@
         for (NSString *key in self.watcherMaps.allKeys) {
             WXDBWatcher *watcher = [self.watcherMaps objectForKey:key];
             if (watcher.target) {
-                [watcher.target removeWatcherForKey:watcher.watcherKey];
+                [watcher.target db_removeWatcherForKey:watcher.watcherKey];
             }
         }
         [self.watcherMaps removeAllObjects];

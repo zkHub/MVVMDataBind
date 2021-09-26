@@ -20,14 +20,9 @@
 		58FE841326E0CB1100BA0FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FE841126E0CB1100BA0FE1 /* LaunchScreen.storyboard */; };
 		58FE841626E0CB1100BA0FE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841526E0CB1100BA0FE1 /* main.m */; };
 		58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841C26E0CB7700BA0FE1 /* ViewModel.m */; };
-		58FE842126E0E05700BA0FE1 /* DBObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842026E0E05700BA0FE1 /* DBObserver.m */; };
 		58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842326E0E75B00BA0FE1 /* TestView.m */; };
 		58FE842726E1D07300BA0FE1 /* Dep.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842626E1D07200BA0FE1 /* Dep.m */; };
 		58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842926E2066F00BA0FE1 /* Watcher.m */; };
-		58FE842D26E21A4B00BA0FE1 /* ObserverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */; };
-		58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842F26E4B21500BA0FE1 /* ObserverManager.m */; };
-		58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843226E4B2B600BA0FE1 /* DataBind.m */; };
-		58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843526E513B600BA0FE1 /* DBWatcher.m */; };
 		58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */; };
 		58FE843C26E5187600BA0FE1 /* WXDBTargetFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843B26E5187600BA0FE1 /* WXDBTargetFlag.m */; };
 		58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */; };
@@ -61,22 +56,12 @@
 		58FE841526E0CB1100BA0FE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58FE841C26E0CB7700BA0FE1 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		58FE841D26E0CB7700BA0FE1 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		58FE841F26E0E05700BA0FE1 /* DBObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBObserver.h; sourceTree = "<group>"; };
-		58FE842026E0E05700BA0FE1 /* DBObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBObserver.m; sourceTree = "<group>"; };
 		58FE842226E0E75B00BA0FE1 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		58FE842326E0E75B00BA0FE1 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		58FE842526E1D07200BA0FE1 /* Dep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dep.h; sourceTree = "<group>"; };
 		58FE842626E1D07200BA0FE1 /* Dep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dep.m; sourceTree = "<group>"; };
 		58FE842826E2066F00BA0FE1 /* Watcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Watcher.h; sourceTree = "<group>"; };
 		58FE842926E2066F00BA0FE1 /* Watcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Watcher.m; sourceTree = "<group>"; };
-		58FE842B26E21A4B00BA0FE1 /* ObserverViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverViewModel.h; sourceTree = "<group>"; };
-		58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverViewModel.m; sourceTree = "<group>"; };
-		58FE842E26E4B21500BA0FE1 /* ObserverManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverManager.h; sourceTree = "<group>"; };
-		58FE842F26E4B21500BA0FE1 /* ObserverManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverManager.m; sourceTree = "<group>"; };
-		58FE843126E4B2B600BA0FE1 /* DataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBind.h; sourceTree = "<group>"; };
-		58FE843226E4B2B600BA0FE1 /* DataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBind.m; sourceTree = "<group>"; };
-		58FE843426E513B600BA0FE1 /* DBWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBWatcher.h; sourceTree = "<group>"; };
-		58FE843526E513B600BA0FE1 /* DBWatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBWatcher.m; sourceTree = "<group>"; };
 		58FE843726E516EA00BA0FE1 /* NSObject+WXDataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXDataBind.h"; sourceTree = "<group>"; };
 		58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXDataBind.m"; sourceTree = "<group>"; };
 		58FE843A26E5187600BA0FE1 /* WXDBTargetFlag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBTargetFlag.h; sourceTree = "<group>"; };
@@ -128,8 +113,6 @@
 				58FE840A26E0CB0E00BA0FE1 /* ViewController.m */,
 				58FE841D26E0CB7700BA0FE1 /* ViewModel.h */,
 				58FE841C26E0CB7700BA0FE1 /* ViewModel.m */,
-				58FE842B26E21A4B00BA0FE1 /* ObserverViewModel.h */,
-				58FE842C26E21A4B00BA0FE1 /* ObserverViewModel.m */,
 				58FE842526E1D07200BA0FE1 /* Dep.h */,
 				58FE842626E1D07200BA0FE1 /* Dep.m */,
 				58FE842826E2066F00BA0FE1 /* Watcher.h */,
@@ -152,24 +135,8 @@
 				58D97BEF26F1E03B00FF7722 /* WXDataBindTools.h */,
 				58D97BF026F1E03B00FF7722 /* WXDataBindTools.m */,
 				58FE845926E88F0200BA0FE1 /* HookBind */,
-				58FE845826E88DE200BA0FE1 /* KVOBind */,
 			);
 			path = DataBind;
-			sourceTree = "<group>";
-		};
-		58FE845826E88DE200BA0FE1 /* KVOBind */ = {
-			isa = PBXGroup;
-			children = (
-				58FE843126E4B2B600BA0FE1 /* DataBind.h */,
-				58FE843226E4B2B600BA0FE1 /* DataBind.m */,
-				58FE842E26E4B21500BA0FE1 /* ObserverManager.h */,
-				58FE842F26E4B21500BA0FE1 /* ObserverManager.m */,
-				58FE841F26E0E05700BA0FE1 /* DBObserver.h */,
-				58FE842026E0E05700BA0FE1 /* DBObserver.m */,
-				58FE843426E513B600BA0FE1 /* DBWatcher.h */,
-				58FE843526E513B600BA0FE1 /* DBWatcher.m */,
-			);
-			path = KVOBind;
 			sourceTree = "<group>";
 		};
 		58FE845926E88F0200BA0FE1 /* HookBind */ = {
@@ -269,24 +236,19 @@
 				58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */,
 				58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */,
 				58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */,
-				58FE843626E513B700BA0FE1 /* DBWatcher.m in Sources */,
 				581E7A4126EAFC7500A3F526 /* WXDBButton.m in Sources */,
 				58FE842726E1D07300BA0FE1 /* Dep.m in Sources */,
 				58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */,
 				58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */,
-				58FE842D26E21A4B00BA0FE1 /* ObserverViewModel.m in Sources */,
 				58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */,
 				581E7A4426EAFC8300A3F526 /* WXDBLabel.m in Sources */,
 				58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */,
 				58FE843C26E5187600BA0FE1 /* WXDBTargetFlag.m in Sources */,
 				58FE845026E5FFD000BA0FE1 /* WXDBObserver.m in Sources */,
 				581E7A4726EAFC9200A3F526 /* WXDBTextField.m in Sources */,
-				58FE842126E0E05700BA0FE1 /* DBObserver.m in Sources */,
-				58FE843326E4B2B600BA0FE1 /* DataBind.m in Sources */,
 				58FE845726E863ED00BA0FE1 /* UIControl+WXDataBind.m in Sources */,
 				58D97BF626F31D8800FF7722 /* WXDBWatcherContainer.m in Sources */,
 				58D97BF126F1E03B00FF7722 /* WXDataBindTools.m in Sources */,
-				58FE843026E4B21500BA0FE1 /* ObserverManager.m in Sources */,
 				58FE841626E0CB1100BA0FE1 /* main.m in Sources */,
 				58FE840826E0CB0E00BA0FE1 /* SceneDelegate.m in Sources */,
 			);
