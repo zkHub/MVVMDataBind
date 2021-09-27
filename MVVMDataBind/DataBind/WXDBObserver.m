@@ -14,7 +14,7 @@
 #define KVOSwitch 0
 
 
-@interface WXDBObserver ()<VupDepDelegate>
+@interface WXDBObserver ()<WXDBWatcherDelegate>
 @property (nonatomic, strong) NSMutableDictionary<NSString *, WXDBWatcher *> *watcherMaps;
 
 @end

@@ -34,9 +34,7 @@
 
 - (void)valueChange:(UIControl *)target {
     WXDBWatcher *watcher = [self db_watcherForKey:[self db_watcherKeyWithKeyPath:self.db_ctrlBindKeyPath]];
-    if (watcher) {
-        [watcher notify];
-    }
+    [watcher notify];
 }
 
 

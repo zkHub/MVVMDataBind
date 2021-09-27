@@ -119,7 +119,7 @@
     return watcher;
 }
 
-- (WXDBWatcher *)getDepWithSELStr:(NSString *)selStr {
+- (WXDBWatcher *)getWatcherWithSELStr:(NSString *)selStr {
     selStr = [self db_watcherKeyWithKeyPath:[self getKeyPathWithSELStr:selStr]];
     WXDBWatcher *watcher = [self db_watcherForKey:selStr];
     return watcher;
@@ -221,8 +221,8 @@ void wx_setObjectValue(id receiver, SEL selecter, id value) {
         invocation.selector = swizzledSEL;
         [invocation setArgument:argument atIndex:2];
         [invocation invoke];
-        WXDBWatcher *dep = [self getDepWithSELStr:NSStringFromSelector(selecter)];
-        [dep notify];
+        WXDBWatcher *watcher = [self getWatcherWithSELStr:NSStringFromSelector(selecter)];
+        [watcher notify];
     }
 }
 

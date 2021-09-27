@@ -9,7 +9,6 @@
 #import <objc/runtime.h>
 #import "NSObject+WXDataBind.h"
 #import "WXDataBindTools.h"
-#import "WXDBTargetFlag.h"
 
 
 @interface WXDBWatcher ()
@@ -17,8 +16,6 @@
 @property (nonatomic, copy) NSString *keyPath;
 @property (nonatomic, copy) WXDBAnyBlock convertBlock;
 @property (nonatomic, copy) NSString *watcherKey;
-
-@property (nonatomic, strong) WXDBTargetFlag *db_targetFlag;
 
 @end
 
@@ -35,11 +32,6 @@
         self.convertBlock = convertBlock;
     }
     return self;
-}
-
-- (void)setObserver:(id<VupDepDelegate>)observer {
-    _observer = observer;
-    ((NSObject *)self.target).db_observer = observer;
 }
 
 - (void)notify {

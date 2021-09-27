@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol VupDepDelegate <NSObject>
+@protocol WXDBWatcherDelegate <NSObject>
 
 - (void)updateValue:(id)value watcher:(WXDBWatcher*)watcher;
 - (void)removeWathcer:(WXDBWatcher *)watcher;
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface WXDBWatcher : NSObject
-@property (nonatomic, weak) id<VupDepDelegate> observer;
+@property (nonatomic, weak) id<WXDBWatcherDelegate> observer;
 @property (nonatomic, weak, readonly) id target;
 @property (nonatomic, copy, readonly) NSString *watcherKey;
 

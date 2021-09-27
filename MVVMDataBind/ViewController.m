@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "ViewModel.h"
-#import "TestView.h"
 #import "WXDBObserver.h"
 #import "WXDBButton.h"
 #import "WXDBLabel.h"
@@ -55,7 +54,7 @@
 //        return string;
 //    }).bindUI(self.textField, @"text", UIControlEventEditingChanged).bind(self.vm, @"num").bind(self.vm, @"title").bind(self.vm, @"progress").bind(self.vm, @"nsNum");
         
-    WXDBBind(self.vm, num).dbBindConvert(self.label, text, ^(NSString * string) {
+    self.vueObserver = WXDBBind(self.vm, num).dbBindConvert(self.label, text, ^(NSString * string) {
         NSLog(@"change--%@", string);
         return string;
     }).dbBindUI(self.textField, text, UIControlEventEditingChanged).dbBind(self.vm, title).dbBind(self.vm, progress).dbBind(self.vm, nsNum);

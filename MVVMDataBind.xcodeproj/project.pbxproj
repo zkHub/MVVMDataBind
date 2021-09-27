@@ -20,11 +20,7 @@
 		58FE841326E0CB1100BA0FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FE841126E0CB1100BA0FE1 /* LaunchScreen.storyboard */; };
 		58FE841626E0CB1100BA0FE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841526E0CB1100BA0FE1 /* main.m */; };
 		58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE841C26E0CB7700BA0FE1 /* ViewModel.m */; };
-		58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842326E0E75B00BA0FE1 /* TestView.m */; };
-		58FE842726E1D07300BA0FE1 /* Dep.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842626E1D07200BA0FE1 /* Dep.m */; };
-		58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE842926E2066F00BA0FE1 /* Watcher.m */; };
 		58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */; };
-		58FE843C26E5187600BA0FE1 /* WXDBTargetFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE843B26E5187600BA0FE1 /* WXDBTargetFlag.m */; };
 		58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */; };
 		58FE845026E5FFD000BA0FE1 /* WXDBObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE844F26E5FFD000BA0FE1 /* WXDBObserver.m */; };
 		58FE845726E863ED00BA0FE1 /* UIControl+WXDataBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FE845626E863ED00BA0FE1 /* UIControl+WXDataBind.m */; };
@@ -56,16 +52,8 @@
 		58FE841526E0CB1100BA0FE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58FE841C26E0CB7700BA0FE1 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		58FE841D26E0CB7700BA0FE1 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		58FE842226E0E75B00BA0FE1 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		58FE842326E0E75B00BA0FE1 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		58FE842526E1D07200BA0FE1 /* Dep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dep.h; sourceTree = "<group>"; };
-		58FE842626E1D07200BA0FE1 /* Dep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dep.m; sourceTree = "<group>"; };
-		58FE842826E2066F00BA0FE1 /* Watcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Watcher.h; sourceTree = "<group>"; };
-		58FE842926E2066F00BA0FE1 /* Watcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Watcher.m; sourceTree = "<group>"; };
 		58FE843726E516EA00BA0FE1 /* NSObject+WXDataBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXDataBind.h"; sourceTree = "<group>"; };
 		58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXDataBind.m"; sourceTree = "<group>"; };
-		58FE843A26E5187600BA0FE1 /* WXDBTargetFlag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBTargetFlag.h; sourceTree = "<group>"; };
-		58FE843B26E5187600BA0FE1 /* WXDBTargetFlag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDBTargetFlag.m; sourceTree = "<group>"; };
 		58FE844426E5FCE400BA0FE1 /* WXDBWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBWatcher.m; sourceTree = "<group>"; };
 		58FE844826E5FCE400BA0FE1 /* WXDBWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBWatcher.h; sourceTree = "<group>"; };
 		58FE844E26E5FFD000BA0FE1 /* WXDBObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDBObserver.h; sourceTree = "<group>"; };
@@ -113,12 +101,12 @@
 				58FE840A26E0CB0E00BA0FE1 /* ViewController.m */,
 				58FE841D26E0CB7700BA0FE1 /* ViewModel.h */,
 				58FE841C26E0CB7700BA0FE1 /* ViewModel.m */,
-				58FE842526E1D07200BA0FE1 /* Dep.h */,
-				58FE842626E1D07200BA0FE1 /* Dep.m */,
-				58FE842826E2066F00BA0FE1 /* Watcher.h */,
-				58FE842926E2066F00BA0FE1 /* Watcher.m */,
-				58FE842226E0E75B00BA0FE1 /* TestView.h */,
-				58FE842326E0E75B00BA0FE1 /* TestView.m */,
+				581E7A3F26EAFC7500A3F526 /* WXDBButton.h */,
+				581E7A4026EAFC7500A3F526 /* WXDBButton.m */,
+				581E7A4226EAFC8300A3F526 /* WXDBLabel.h */,
+				581E7A4326EAFC8300A3F526 /* WXDBLabel.m */,
+				581E7A4526EAFC9200A3F526 /* WXDBTextField.h */,
+				581E7A4626EAFC9200A3F526 /* WXDBTextField.m */,
 				58FE840C26E0CB0E00BA0FE1 /* Main.storyboard */,
 				58FE840F26E0CB1100BA0FE1 /* Assets.xcassets */,
 				58FE841126E0CB1100BA0FE1 /* LaunchScreen.storyboard */,
@@ -131,29 +119,13 @@
 		58FE844026E5FCE300BA0FE1 /* DataBind */ = {
 			isa = PBXGroup;
 			children = (
-				58D97BF326F1E29D00FF7722 /* WXDataBindDefine.h */,
-				58D97BEF26F1E03B00FF7722 /* WXDataBindTools.h */,
-				58D97BF026F1E03B00FF7722 /* WXDataBindTools.m */,
-				58FE845926E88F0200BA0FE1 /* HookBind */,
-			);
-			path = DataBind;
-			sourceTree = "<group>";
-		};
-		58FE845926E88F0200BA0FE1 /* HookBind */ = {
-			isa = PBXGroup;
-			children = (
-				58FE843A26E5187600BA0FE1 /* WXDBTargetFlag.h */,
-				58FE843B26E5187600BA0FE1 /* WXDBTargetFlag.m */,
 				58FE843726E516EA00BA0FE1 /* NSObject+WXDataBind.h */,
 				58FE843826E516EA00BA0FE1 /* NSObject+WXDataBind.m */,
 				58FE845526E863EC00BA0FE1 /* UIControl+WXDataBind.h */,
 				58FE845626E863ED00BA0FE1 /* UIControl+WXDataBind.m */,
-				581E7A3F26EAFC7500A3F526 /* WXDBButton.h */,
-				581E7A4026EAFC7500A3F526 /* WXDBButton.m */,
-				581E7A4226EAFC8300A3F526 /* WXDBLabel.h */,
-				581E7A4326EAFC8300A3F526 /* WXDBLabel.m */,
-				581E7A4526EAFC9200A3F526 /* WXDBTextField.h */,
-				581E7A4626EAFC9200A3F526 /* WXDBTextField.m */,
+				58D97BF326F1E29D00FF7722 /* WXDataBindDefine.h */,
+				58D97BEF26F1E03B00FF7722 /* WXDataBindTools.h */,
+				58D97BF026F1E03B00FF7722 /* WXDataBindTools.m */,
 				58FE844E26E5FFD000BA0FE1 /* WXDBObserver.h */,
 				58FE844F26E5FFD000BA0FE1 /* WXDBObserver.m */,
 				58FE844826E5FCE400BA0FE1 /* WXDBWatcher.h */,
@@ -161,7 +133,7 @@
 				58D97BF426F31D8800FF7722 /* WXDBWatcherContainer.h */,
 				58D97BF526F31D8800FF7722 /* WXDBWatcherContainer.m */,
 			);
-			path = HookBind;
+			path = DataBind;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,17 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58FE842A26E2066F00BA0FE1 /* Watcher.m in Sources */,
-				58FE842426E0E75B00BA0FE1 /* TestView.m in Sources */,
 				58FE843926E516EA00BA0FE1 /* NSObject+WXDataBind.m in Sources */,
 				581E7A4126EAFC7500A3F526 /* WXDBButton.m in Sources */,
-				58FE842726E1D07300BA0FE1 /* Dep.m in Sources */,
 				58FE840B26E0CB0E00BA0FE1 /* ViewController.m in Sources */,
 				58FE844D26E5FCE400BA0FE1 /* WXDBWatcher.m in Sources */,
 				58FE840526E0CB0E00BA0FE1 /* AppDelegate.m in Sources */,
 				581E7A4426EAFC8300A3F526 /* WXDBLabel.m in Sources */,
 				58FE841E26E0CB7700BA0FE1 /* ViewModel.m in Sources */,
-				58FE843C26E5187600BA0FE1 /* WXDBTargetFlag.m in Sources */,
 				58FE845026E5FFD000BA0FE1 /* WXDBObserver.m in Sources */,
 				581E7A4726EAFC9200A3F526 /* WXDBTextField.m in Sources */,
 				58FE845726E863ED00BA0FE1 /* UIControl+WXDataBind.m in Sources */,

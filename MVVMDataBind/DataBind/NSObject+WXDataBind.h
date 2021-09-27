@@ -6,16 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WXDBTargetFlag.h"
 #import "WXDBWatcher.h"
-#import "WXDBObserver.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (WXDataBind)
 @property(nonatomic, assign) BOOL db_isDidChanged;
-@property (nonatomic, strong) WXDBObserver *db_observer;
 
 - (WXDBWatcher *)db_addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock;
 
