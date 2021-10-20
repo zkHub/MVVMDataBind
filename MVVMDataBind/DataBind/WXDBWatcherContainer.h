@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WXDBWatcherContainer : NSObject
 
+- (BOOL)containsWatcher:(WXDBWatcher *)watcher;
 - (void)setWathcer:(WXDBWatcher *)watcher forKey:(NSString *)key;
 - (WXDBWatcher *)watcherForKey:(NSString *)key;
 - (void)removeWatcherForKey:(NSString *)key;

@@ -8,14 +8,16 @@
 #import <Foundation/Foundation.h>
 #import "WXDBWatcher.h"
 
+@class WXDBObserver;
+@class WXDBObserverContainer;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (WXDataBind)
 @property(nonatomic, assign) BOOL db_isDidChanged;
+@property (nonatomic, strong) WXDBObserverContainer *db_observerContainer;
 
-- (WXDBWatcher *)db_addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock;
-
+- (WXDBWatcher *)db_addBindObserver:(WXDBObserver *)observer keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock;
 
 - (NSString *)db_watcherKeyWithKeyPath:(NSString *)keyPath;
 - (void)db_setWatcher:(WXDBWatcher *)watcher forKey:(NSString *)key;

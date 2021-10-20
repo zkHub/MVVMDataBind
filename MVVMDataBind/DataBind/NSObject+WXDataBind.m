@@ -8,10 +8,10 @@
 #import "NSObject+WXDataBind.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import "WXDBWatcher.h"
 #import <UIKit/UIKit.h>
+#import "WXDBWatcher.h"
 #import "WXDBWatcherContainer.h"
-
+#import "WXDBObserverContainer.h"
 
 @interface NSObject ()
 @property (nonatomic, strong) WXDBWatcherContainer *db_watcherContainer;
@@ -25,25 +25,22 @@
     NSNumber *boolValue = objc_getAssociatedObject(self, @selector(db_isDidChanged));
     return [boolValue boolValue];
 }
-
 - (void)setDb_isDidChanged:(BOOL)db_isDidChanged {
     objc_setAssociatedObject(self, @selector(db_isDidChanged), @(db_isDidChanged), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (WXDBObserver *)db_observer {
-    return objc_getAssociatedObject(self, @selector(db_observer));
-}
-
-- (void)setDb_observer:(WXDBObserver *)db_observer {
-    objc_setAssociatedObject(self, @selector(db_observer), db_observer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (WXDBWatcherContainer *)db_watcherContainer {
     return objc_getAssociatedObject(self, @selector(db_watcherContainer));
 }
-
 - (void)setDb_watcherContainer:(WXDBWatcherContainer *)db_watcherContainer {
     objc_setAssociatedObject(self, @selector(db_watcherContainer), db_watcherContainer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (WXDBObserverContainer *)db_observerContainer {
+    return objc_getAssociatedObject(self, @selector(db_observerContainer));
+}
+- (void)setDb_observerContainer:(WXDBObserverContainer *)db_observerContainer {
+    objc_setAssociatedObject(self, @selector(db_observerContainer), db_observerContainer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)db_watcherKeyWithKeyPath:(NSString *)keyPath {
@@ -51,7 +48,13 @@
 }
 
 
-- (WXDBWatcher *)db_addBindObserverWithKeyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock {
+- (WXDBWatcher *)db_addBindObserver:(WXDBObserver *)observer keyPath:(NSString *)keyPath convertBlock:(WXDBAnyBlock)convertBlock {
+    if (!self.db_observerContainer) {
+        self.db_observerContainer = [WXDBObserverContainer new];
+    }
+    if (![self.db_observerContainer containsObserver:observer]) {
+        [self.db_observerContainer addObserver:observer];
+    }
     
     NSString *capitalStr = [NSString stringWithFormat:@"%@%@", [[keyPath substringToIndex:1] uppercaseString], [keyPath substringFromIndex:1]];
     const char * swizzledSELName = [[NSString stringWithFormat:@"wx_set%@:", capitalStr] cStringUsingEncoding:NSUTF8StringEncoding];
@@ -113,15 +116,18 @@
         class_replaceMethod(self.class, swizzledSEL, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         class_replaceMethod(self.class, originalSEL, swizzledImp, method_getTypeEncoding(originalMethod));
     }
-    //给key关联 dep
-    WXDBWatcher *watcher = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
-    [self db_setWatcher:watcher forKey:[self db_watcherKeyWithKeyPath:keyPath]];
+    // 每个对象的每个key对应唯一一个watcher
+    WXDBWatcher *watcher = [self db_watcherForKey:[self db_watcherKeyWithKeyPath:keyPath]];
+    if (!watcher) {
+        watcher = [[WXDBWatcher alloc] initWithTarget:self keyPath:keyPath convertBlock:convertBlock];
+        [self db_setWatcher:watcher forKey:[self db_watcherKeyWithKeyPath:keyPath]];
+    }
     return watcher;
 }
 
 - (WXDBWatcher *)getWatcherWithSELStr:(NSString *)selStr {
-    selStr = [self db_watcherKeyWithKeyPath:[self getKeyPathWithSELStr:selStr]];
-    WXDBWatcher *watcher = [self db_watcherForKey:selStr];
+    NSString *key = [self db_watcherKeyWithKeyPath:[self getKeyPathWithSELStr:selStr]];
+    WXDBWatcher *watcher = [self db_watcherForKey:key];
     return watcher;
 }
 

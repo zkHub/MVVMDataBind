@@ -8,11 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+WXDataBind.h"
 
+@class WXDBObserver;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIControl (WXDataBind)
 
-- (WXDBWatcher *)db_addBindUIObserverWithKeyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock;
+- (WXDBWatcher *)db_addBindUIObserver:(WXDBObserver *)observer keyPath:(NSString *)keyPath forControlEvents:(UIControlEvents)controlEvent convertBlock:(WXDBAnyBlock)convertBlock;
 
 @end
 

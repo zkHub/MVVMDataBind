@@ -23,6 +23,10 @@
     return self;
 }
 
+- (BOOL)containsWatcher:(WXDBWatcher *)watcher {
+    return [self.wathcerMaps.allValues containsObject:watcher];
+}
+
 - (void)setWathcer:(WXDBWatcher *)watcher forKey:(NSString *)key {
     if (watcher && key) {
         [self.wathcerMaps setObject:watcher forKey:key];
