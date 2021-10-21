@@ -16,11 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
     (((void)(NO && ((void)target.keyPath, NO)), # keyPath))
 
 
-#define WXDBBind(target, keyPath)                           WXDBObserver.bind(target, @keypathSting(target, keyPath))
-#define dbBind(target, keyPath)                             bind(target, @keypathSting(target, keyPath))
-#define dbBindUI(target, keyPath, event)                    bindUI(target, @keypathSting(target, keyPath), event)
-#define dbBindConvert(target, keyPath, block)               bindConvert(target, @keypathSting(target, keyPath), block)
-#define dbBindUIConvert(target, keyPath, event, block)      bindUIConvert(target, @keypathSting(target, keyPath), event, block)
+#define WXDBBind(target, keyPath)                               WXDBObserver.bind(target, @keypathSting(target, keyPath))
+#define WXDBBindUI(target, keyPath, event)                      WXDBObserver.bindUI(target, @keypathSting(target, keyPath), event)
+#define WXDBBindConvert(target, keyPath, block)                 WXDBObserver.bindConvert(target, @keypathSting(target, keyPath), block)
+#define WXDBBindUIConvert(target, keyPath, event, block)        WXDBObserver.bindUIConvert(target, @keypathSting(target, keyPath), event, block)
+
+#define dbBind(target, keyPath)                                 bind(target, @keypathSting(target, keyPath))
+#define dbBindUI(target, keyPath, event)                        bindUI(target, @keypathSting(target, keyPath), event)
+#define dbBindConvert(target, keyPath, block)                   bindConvert(target, @keypathSting(target, keyPath), block)
+#define dbBindUIConvert(target, keyPath, event, block)          bindUIConvert(target, @keypathSting(target, keyPath), event, block)
 
 
 typedef id _Nullable (^WXDBAnyBlock)(id value);
