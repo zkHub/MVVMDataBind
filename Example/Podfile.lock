@@ -1,0 +1,23 @@
+PODS:
+  - ReactiveObjC (3.1.1)
+  - WXDataBind (0.1.0)
+
+DEPENDENCIES:
+  - ReactiveObjC
+  - WXDataBind (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - ReactiveObjC
+
+EXTERNAL SOURCES:
+  WXDataBind:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  WXDataBind: 69f9df23aee37677d7bd87377e1bbb1d7bfe1973
+
+PODFILE CHECKSUM: e2c70f437179f30fdafc5c42d828af88b687dcf4
+
+COCOAPODS: 1.12.1
